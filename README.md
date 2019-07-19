@@ -9,6 +9,7 @@ This application is a mapping of knowledge domains. It allows you to log what yo
 Tree structure encompassing sub-domains.
 
 Contains:
+- name - _string_
 - id - _number_
 - parent - _id_
 - children - _array of id's_
@@ -22,5 +23,7 @@ Full graph of **Knowledge Nodes**. Dictionary of nodes, indexed by ids.
 Individual node containing all of the information about the subject. 
 
 Conatins:
+- name - _string_
 - id - _number_
 - edges - _array of id's of connected nodes_
+- domain - _number [id of domain]_
