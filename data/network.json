@@ -1,0 +1,86 @@
+{
+  "schema": {
+    "domain": {
+      "name": "string",
+      "id": "number",
+      "children": "Array<Object>"
+    },
+    "network": {
+      "id": {
+        "name": "string",
+        "id": "number",
+        "edges": "Array<Number>"
+      }
+    }
+  },
+  "domain": {
+    "name": "Root",
+    "id": 0,
+    "children": [{
+        "name": "Mathematics",
+        "id": 1,
+        "children": [{
+          "name": "Discrete Mathematics",
+          "id": 6,
+          "children": [{
+            "name": "Graph Theory",
+            "id": 7,
+            "parent": 6,
+            "children": []
+          }]
+        }]
+      },
+      {
+        "name": "Technology",
+        "id": 2,
+        "children": [{
+          "name": "Computing and Information Tehcnology",
+          "id": 3,
+          "children": [{
+            "name": "Computer Science",
+            "id": 4,
+            "children": []
+          }]
+        }]
+      }
+    ]
+  },
+  "network": {
+    "0": {
+      "name": "Graph",
+      "id": 0,
+      "edges": [2],
+      "domain": 7
+    },
+    "1": {
+      "name": "Software",
+      "id": 1,
+      "edges": [3],
+      "domain": 3
+    },
+    "2": {
+      "name": "Graph Theory",
+      "id": 2,
+      "edges": [0, 4, 5],
+      "domain": 7
+    },
+    "3": {
+      "name": "Computer",
+      "id": 3,
+      "edges": [1, 4],
+      "domain": 3
+    },
+    "4": {
+      "name": "Algorithm",
+      "id": 4,
+      "edges": [2, 3, 5],
+      "domain": 4
+    },
+    "5": {
+      "name": "Discrete Mathematics",
+      "id": 5,
+      "edges": [2, 4],
+      "domain": 6
+    }
+  }
+}
