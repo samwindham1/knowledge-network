@@ -20,15 +20,21 @@
         "name": "Mathematics",
         "id": 1,
         "children": [{
-          "name": "Discrete Mathematics",
-          "id": 6,
-          "children": [{
-            "name": "Graph Theory",
-            "id": 7,
-            "parent": 6,
+            "name": "Discrete Mathematics",
+            "id": 6,
+            "children": [{
+              "name": "Graph Theory",
+              "id": 7,
+              "parent": 6,
+              "children": []
+            }]
+          },
+          {
+            "name": "Algebra",
+            "id": 8,
             "children": []
-          }]
-        }]
+          }
+        ]
       },
       {
         "name": "Technology",
