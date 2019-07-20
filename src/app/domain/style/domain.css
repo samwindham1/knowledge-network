@@ -1,0 +1,44 @@
+.domain {
+  border: 1px solid #ddddee;
+  border-radius: 10px;
+  background-color: #ddddee;
+  box-shadow: 0 6px 6px -6px #666;
+
+  padding: 20px;
+  position: relative;
+
+  height: 100px;
+  width: 100%;
+  flex-basis: 100%;
+}
+
+.domain .domain-title {
+  border-bottom: 1px solid black;
+}
+
+.domain .domain-id {
+  margin-right: 10px;
+}
+
+.domain .domain-name {}
+
+.domain .button-row {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 20px;
+  margin-top: 0;
+}
+
+.domain .open-button {
+  float: right;
+  width: 20px;
+  height: 20px;
+  background-color: #ccccee;
+  border-radius: 2px;
+}
+
+.domain .open-button:hover {
+  background-color: #bbbbee;
+}

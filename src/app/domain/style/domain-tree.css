@@ -1,0 +1,15 @@
+.domain-tree {
+  padding: 10px;
+}
+
+.domain-container {
+  margin: 10px 0 0 10px;
+  /* border: 1px solid #eee;
+  padding: 10px; */
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+
+  flex: 1;
+}
