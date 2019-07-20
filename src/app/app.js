@@ -1,10 +1,13 @@
 import React from 'react';
-import Network from './network/network.js';
+// import Network from './network/network';
+import DomainTree from './domain/domain-tree';
 
 class App extends React.Component {
   render() {
     return (
-      <Network />
+      <div className="app-container">
+        <DomainTree />
+      </div>
     )
   }
 }
