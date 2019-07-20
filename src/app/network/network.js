@@ -1,43 +1,25 @@
 import React from 'react';
-import API from '@api/api.js';
+import API from '@api/api';
+
+import Node from './node';
 
 class Network extends React.Component {
   constructor() {
     super();
-    this.state = { loading: true };
+
+    this.state = {};
   }
 
   componentDidMount() {
-    API.getData().then(data => { this.setState({ loading: false, data }) });
+    API.getSchema().then(schema => this.setState({ schema }));
+    API.getNetwork().then(network => this.setState({ network }));
   }
 
-  renderSchema(data) {
+  renderNetwork(network) {
     return (
-      <div className="schema">
-        <h2>Schema:</h2>
-        <h3>Domain:</h3>
-        <div className="json schema-domain">
-          {JSON.stringify(data.schema.domain, null, 4)}
-        </div>
-        <h3>Network:</h3>
-        <div className="json schema-network">
-          {JSON.stringify(data.schema.network, null, 4)}
-        </div>
-      </div>
-    );
-  }
-
-  renderData(data) {
-    return (
-      <div className="data">
-        <h2>Data:</h2>
-        <h3>Domain:</h3>
-        <div className="json data-domain">
-          {JSON.stringify(data.domain, null, 4)}
-        </div>
-        <h3>Network:</h3>
+      <div className="network">
         <div className="json data-network">
-          {JSON.stringify(data.network, null, 4)}
+          {JSON.stringify(network, null, 4)}
         </div>
       </div>
     );
@@ -45,11 +27,9 @@ class Network extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="network-graph">
         <h1>Network</h1>
-        {this.state.loading && <div>loading...</div>}
-        {this.state.data && this.renderSchema(this.state.data)}
-        {this.state.data && this.renderData(this.state.data)}
+        {this.state.network && this.renderNetwork(this.state.network)}
       </div>
     );
   }
